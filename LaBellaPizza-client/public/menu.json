@@ -1,0 +1,486 @@
+[
+    {
+        "_id": "642c155b2c4774f05c36eeaa",
+        "name": "Neapolitan Style Pizza",
+        "recipe": "Features tomatoes, mozzarella from Campania, basil, and extra virgin olive oil.",
+        "image": "/pizza/pizza 1.png",
+        "category": "popular",
+        "price": 2100
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb9",
+        "name": "Chicago Style Pizza",
+        "recipe": "Chicago pizza are mozzarella, ground beef, sausage, pepperoni, onion, mushrooms, and green peppers, placed underneath the tomato sauce.",
+        "image": "/pizza/pizza 2.png",
+        "category": "popular",
+        "price": 3600
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7c",
+        "name": "New York Style Pizza",
+        "recipe": "New York pizza with condiments like oregano, red pepper flakes, Parmesan cheese, and garlic powder.",
+        "image": "/pizza/pizza 3.png",
+        "category": "special",
+        "price": 2750
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee88",
+        "name": "Sicilian Style Pizza",
+        "recipe": "Sicilian pizzas are often topped with bits of tomato, onion, anchovies, and herbs.",
+        "image": "/pizza/pizza 4.png",
+        "category": "popular",
+        "price": 4100
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7a",
+        "name": "Greek Style Pizza",
+        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese, black olives, and red onion.",
+        "image": "/pizza/pizza 5.png,",
+        "category": "special",
+        "price": 3400
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee74",
+        "name": "California Style Pizza",
+        "recipe": "include anything from chicken and artichokes to goat cheese and egg.",
+        "image": "/pizza/pizza 6.png",
+        "category": "special",
+        "price": 2500
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee712",
+        "name": "Detroit Style Pizza",
+        "recipe": "Detroit pizza traditionally features pepperoni, brick cheese (usually Wisconsin brick cheese), and tomato sauce.",
+        "image": "/pizza/pizza 7.png",
+        "category": "popular",
+        "price": 3200
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7x",
+        "name": "St. Louis Style Pizza",
+        "recipe": "St. Louis pizza features Provel cheese and a sweeter tomato sauce with a hefty dosage of oregano.",
+        "image": "/pizza/pizza 8.png",
+        "category": "special",
+        "price": 2700
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8c",
+        "name": "Cheeseburger Melts",
+        "recipe": "A Crunchy folded dough Loaded with a Chicken Burger Patty, Carameli.",
+        "image": "/melts/melts 1.jpg",
+        "category": "melts",
+        "price": 1200
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee94",
+        "name": "Spicy Chicken Combo",
+        "recipe": "A Crunchy folded dough Loaded with Spicy Chicken, Kotchchi Meat",
+        "image": "/melts/melts 2.jpg",
+        "category": "popular",
+        "price": 1300
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9e",
+        "name": "Sri Lankan Chicken",
+        "recipe": "A Crunchy folded dough Loaded with Black Chicken, Onion, and Cheese",
+        "image": "/melts/melts 3.jpg",
+        "category": "melts",
+        "price": 1200
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea6",
+        "name": "Veggie Lovers",
+        "recipe": "A Crunchy folded dough Loaded with Spicy Veg topping, Paneer",
+        "image": "/melts/melts 4.jpg",
+        "category": "popular",
+        "price": 1350
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeaf",
+        "name": "Melt Seafood Sensation",
+        "recipe": "A Crunchy folded dough Loaded with Creamy Cuttlefish & Prawn.",
+        "image": "/melts/melts 5.jpg",
+        "category": "melts",
+        "price": 1250
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee89",
+        "name": "Cinnamon Swirls",
+        "recipe": "A soft dough rolled with sweet cinnamon butter, baked to cream",
+        "image": "/deserts/desert 1.jpg",
+        "category": "dessert",
+        "price": 1300
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8a",
+        "name": "Chocolate Melt Lava Cake",
+        "recipe": "Soft, moist chocolate cake with a burst of thick, hot liquid ",
+        "image": "/deserts/desert 2.jpgg",
+        "category": "dessert",
+        "price": 1250
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee96",
+        "name": "Chocolate Swirls",
+        "recipe": "A soft dough rolled with delicious chocolate chips, baked to perfec.",
+        "image": "/deserts/desert 3.jpg",
+        "category": "popular",
+        "price": 950
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee81",
+        "name": "TChocolate Calzone",
+        "recipe": "A perfectly baked soft dough filled with chocolate chips and cream",
+        "image": "/deserts/desert 4.jpg",
+        "category": "popular",
+        "price": 1000
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee84",
+        "name": "Neapolitan Style Pizza",
+        "recipe": "Features tomatoes, mozzarella from Campania, basil, and extra virgin olive oil.",
+        "image": "/pizza/pizza 1.png",
+        "category": "popular",
+        "price": 2100
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea4",
+        "name": "Cheeseburger Melts",
+        "recipe": "A Crunchy folded dough Loaded with a Chicken Burger Patty, Carameli.",
+        "image": "/melts/melts 1.jpg",
+        "category": "melts",
+        "price": 1200
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea5",
+        "name": "St. Louis Style Pizza",
+        "recipe": "St. Louis pizza features Provel cheese and a sweeter tomato sauce with a hefty dosage of oregano.",
+        "image": "/pizza/pizza 8.png",
+        "category": "special",
+        "price": 2700
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee87",
+        "name": "Veggie Lovers",
+        "recipe": "A Crunchy folded dough Loaded with Spicy Veg topping, Paneer",
+        "image": "/melts/melts 4.jpg",
+        "category": "popular",
+        "price": 1350
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee83",
+        "name": "Cinnamon Swirls",
+        "recipe": "A soft dough rolled with sweet cinnamon butter, baked to cream",
+        "image": "/deserts/desert 1.jpg",
+        "category": "dessert",
+        "price": 1300
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7f",
+        "name": "Chocolate Calzone",
+        "recipe": "A perfectly baked soft dough filled with chocolate chips and cream",
+        "image": "/deserts/desert 4.jpg",
+        "category": "popular",
+        "price": 1000
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea8",
+        "name": "Melt Seafood Sensation",
+        "recipe": "A Crunchy folded dough Loaded with Creamy Cuttlefish & Prawn.",
+        "image": "/melts/melts 5.jpg",
+        "category": "melts",
+        "price": 1250
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeba",
+        "name": "Chicago Style Pizza",
+        "recipe": "Chicago pizza are mozzarella, ground beef, sausage, pepperoni, onion, mushrooms, and green peppers, placed underneath the tomato sauce.",
+        "image": "/pizza/pizza 2.png",
+        "category": "popular",
+        "price": 3600
+    
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee80",
+        "name": "New York Style Pizza",
+        "recipe": "New York pizza with condiments like oregano, red pepper flakes, Parmesan cheese, and garlic powder.",
+        "image": "/pizza/pizza 3.png",
+        "category": "special",
+        "price": 2750
+    
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee90",
+        "name": "Greek Style Pizza",
+        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese, black olives, and red onion.",
+        "image": "/pizza/pizza 5.png,",
+        "category": "special",
+        "price": 3400
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb0",
+        "name": "Sri Lankan Chicken",
+        "recipe": "A Crunchy folded dough Loaded with Black Chicken, Onion, and Cheese",
+        "image": "/melts/melts 3.jpg",
+        "category": "melts",
+        "price": 1200
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8d",
+        "name": "Melt Seafood Sensation",
+        "recipe": "A Crunchy folded dough Loaded with Creamy Cuttlefish & Prawn.",
+        "image": "/melts/melts 5.jpg",
+        "category": "melts",
+        "price": 1250
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8e",
+        "name": "Chocolate Swirls",
+        "recipe": "A soft dough rolled with delicious chocolate chips, baked to perfec.",
+        "image": "/deserts/desert 3.jpg",
+        "category": "popular",
+        "price": 950
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea7",
+        "name": "Chocolate Melt Lava Cake",
+        "recipe": "Soft, moist chocolate cake with a burst of thick, hot liquid ",
+        "image": "/deserts/desert 2.jpgg",
+        "category": "dessert",
+        "price": 1250
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee99",
+        "name": "St. Louis Style Pizza",
+        "recipe": "St. Louis pizza features Provel cheese and a sweeter tomato sauce with a hefty dosage of oregano.",
+        "image": "/pizza/pizza 8.png",
+        "category": "special",
+        "price": 2700
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb3",
+        "name": "Sri Lankan Chicken",
+        "recipe": "A Crunchy folded dough Loaded with Black Chicken, Onion, and Cheese",
+        "image": "/melts/melts 3.jpg",
+        "category": "melts",
+        "price": 1200
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb5",
+        "name": "New York Style Pizza",
+        "recipe": "New York pizza with condiments like oregano, red pepper flakes, Parmesan cheese, and garlic powder.",
+        "image": "/pizza/pizza 3.png",
+        "category": "special",
+        "price": 2750
+    
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb6",
+        "name": "Greek Style Pizza",
+        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese, black olives, and red onion.",
+        "image": "/pizza/pizza 5.png,",
+        "category": "special",
+        "price": 3400
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb8",
+        "name": "Chocolate Calzone",
+        "recipe": "A perfectly baked soft dough filled with chocolate chips and cream",
+        "image": "/deserts/desert 4.jpg",
+        "category": "popular",
+        "price": 1000
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7e",
+        "name": "Cinnamon Swirls",
+        "recipe": "A soft dough rolled with sweet cinnamon butter, baked to cream",
+        "image": "/deserts/desert 1.jpg",
+        "category": "dessert",
+        "price": 1300
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8b",
+        "name": "St. Louis Style Pizza",
+        "recipe": "St. Louis pizza features Provel cheese and a sweeter tomato sauce with a hefty dosage of oregano.",
+        "image": "/pizza/pizza 8.png",
+        "category": "special",
+        "price": 2700
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8f",
+        "name": "Greek Style Pizza",
+        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese, black olives, and red onion.",
+        "image": "/pizza/pizza 5.png,",
+        "category": "special",
+        "price": 3400
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee91",
+        "name": "Cheeseburger Melts",
+        "recipe": "A Crunchy folded dough Loaded with a Chicken Burger Patty, Carameli.",
+        "image": "/melts/melts 1.jpg",
+        "category": "melts",
+        "price": 1200
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee97",
+        "name": "Sicilian Style Pizza",
+        "recipe": "Sicilian pizzas are often topped with bits of tomato, onion, anchovies, and herbs.",
+        "image": "/pizza/pizza 4.png",
+        "category": "popular",
+        "price": 4100
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea0",
+        "name": "California Style Pizza",
+        "recipe": "include anything from chicken and artichokes to goat cheese and egg.",
+        "image": "/pizza/pizza 6.png",
+        "category": "special",
+        "price": 2500
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea9",
+        "name": "Neapolitan Style Pizza",
+        "recipe": "Features tomatoes, mozzarella from Campania, basil, and extra virgin olive oil.",
+        "image": "/pizza/pizza 1.png",
+        "category": "popular",
+        "price": 2100
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee85",
+        "name": "Sri Lankan Chicken",
+        "recipe": "A Crunchy folded dough Loaded with Black Chicken, Onion, and Cheese",
+        "image": "/melts/melts 3.jpg",
+        "category": "melts",
+        "price": 1200
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee93",
+        "name": "Chocolate Calzone",
+        "recipe": "A perfectly baked soft dough filled with chocolate chips and cream",
+        "image": "/deserts/desert 4.jpg",
+        "category": "popular",
+        "price": 1000
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee95",
+        "name": "Cinnamon Swirls",
+        "recipe": "A soft dough rolled with sweet cinnamon butter, baked to cream",
+        "image": "/deserts/desert 1.jpg",
+        "category": "dessert",
+        "price": 1300
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9b",
+        "name": "Spicy Chicken Combo",
+        "recipe": "A Crunchy folded dough Loaded with Spicy Chicken, Kotchchi Meat",
+        "image": "/melts/melts 2.jpg",
+        "category": "popular",
+        "price": 1300
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb7",
+        "name": "Sri Lankan Chicken",
+        "recipe": "A Crunchy folded dough Loaded with Black Chicken, Onion, and Cheese",
+        "image": "/melts/melts 3.jpg",
+        "category": "melts",
+        "price": 1200
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9c",
+        "name": "Greek Style Pizza",
+        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese, black olives, and red onion.",
+        "image": "/pizza/pizza 5.png,",
+        "category": "special",
+        "price": 3400
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9d",
+        "name": "Chicago Style Pizza",
+        "recipe": "Chicago pizza are mozzarella, ground beef, sausage, pepperoni, onion, mushrooms, and green peppers, placed underneath the tomato sauce.",
+        "image": "/pizza/pizza 2.png",
+        "category": "popular",
+        "price": 3600
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeac",
+        "name": "Detroit Style Pizza",
+        "recipe": "Detroit pizza traditionally features pepperoni, brick cheese (usually Wisconsin brick cheese), and tomato sauce.",
+        "image": "/pizza/pizza 7.png",
+        "category": "popular",
+        "price": 3200
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb4",
+        "name": "Spicy Chicken Combo",
+        "recipe": "A Crunchy folded dough Loaded with Spicy Chicken, Kotchchi Meat",
+        "image": "/melts/melts 2.jpg",
+        "category": "popular",
+        "price": 1300
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee98",
+        "name": "New York Style Pizza",
+        "recipe": "New York pizza with condiments like oregano, red pepper flakes, Parmesan cheese, and garlic powder.",
+        "image": "/pizza/pizza 3.png",
+        "category": "special",
+        "price": 2750
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee82",
+        "name": "Chocolate Melt Lava Cake",
+        "recipe": "Soft, moist chocolate cake with a burst of thick, hot liquid ",
+        "image": "/deserts/desert 2.jpgg",
+        "category": "dessert",
+        "price": 1250
+
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee86",
+        "name": "Chocolate Swirls",
+        "recipe": "A soft dough rolled with delicious chocolate chips, baked to perfec.",
+        "image": "/deserts/desert 3.jpg",
+        "category": "popular",
+        "price": 950
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9a",
+        "name": "Sri Lankan Chicken",
+        "recipe": "A Crunchy folded dough Loaded with Black Chicken, Onion, and Cheese",
+        "image": "/melts/melts 3.jpg",
+        "category": "melts",
+        "price": 1200
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeab",
+        "name": "Veggie Lovers",
+        "recipe": "A Crunchy folded dough Loaded with Spicy Veg topping, Paneer",
+        "image": "/melts/melts 4.jpg",
+        "category": "popular",
+        "price": 1350
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb1",
+        "name": "Chicago Style Pizza",
+        "recipe": "Chicago pizza are mozzarella, ground beef, sausage, pepperoni, onion, mushrooms, and green peppers, placed underneath the tomato sauce.",
+        "image": "/pizza/pizza 2.png",
+        "category": "popular",
+        "price": 3600
+    },
+    {
+        "_id": "642c155b2c4774f05c36eead",
+        "name": "California Style Pizza",
+        "recipe": "include anything from chicken and artichokes to goat cheese and egg.",
+        "image": "/pizza/pizza 6.png",
+        "category": "special",
+        "price": 2500
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeae",
+        "name": "Neapolitan Style Pizza",
+        "recipe": "Features tomatoes, mozzarella from Campania, basil, and extra virgin olive oil.",
+        "image": "/pizza/pizza 1.png",
+        "category": "popular",
+        "price": 2100
+    }
+]

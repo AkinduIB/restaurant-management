@@ -10,7 +10,7 @@ export default {
         "red" : "#c3201b",
         "green": "#808000",
         "gray": "#333333",
-        "white": "#fffcf2"
+        "white": "#fff9e3"
       }
     },
   },
