@@ -1,8 +1,13 @@
 import React from 'react'
+import Banner from '../../components/Banner'
+import Categories from './Categories'
 
 export const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Banner/>
+      <Categories/>
+    </div>
   )
 }
 
