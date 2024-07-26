@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Link} from "react-router-dom"
+import {FaHeart} from "react-icons/fa"
 
 const Cards = ({item}) => {
+  const[isHeartFillted, setisHeartFillted] = useState(false);
+
+  const handleHeartClick = () => {
+    setisHeartFillted(!isHeartFillted);
+  }
   return (
     
-        <div className="card bg-base-100 w-96 shadow-xl">
+        <div className="card bg-base-100 w-96 shadow-xl relative">
+          <div className={`rating gap-1 absolute right-2 top-2 p-4 heartStar bg-green ${isHeartFillted ? "text-rose-500" : "text-white"}`}
+          onClick={handleHeartClick}>
+            <FaHeart className='h-5 w-5 cursor-pointer'/>
+          </div>
   <Link to={`/menu/${item._id}`}>
   <figure>
     <img
@@ -13,8 +23,12 @@ const Cards = ({item}) => {
       className="hover:scale-105 transition-all duration-200 md:h-72"/>
   </figure>
   </Link>
-  <div className="card-body">
+  <div className="card-body bg-white">
+    <Link to={`/menu/${item._id}`}>
+    {""}
+    
     <h2 className="card-title">{item.name}!</h2>
+    </Link>
     {/* <p>{item.recipe}</p> */}
     <p>Description of the item</p>
     <div className="card-actions justify-between items-center mt-2">
