@@ -19,7 +19,7 @@ const Services = () => {
               Rooted in passion, we curate unforgettable dining experience and offer exceptional services,
               blending culinary artistry with warm hospitality.
             </p>
-            <button className='btn bg-green text-white px-8 py-3 rounded-full'>Explore</button>
+            <button className='btn bg-red text-white px-8 py-3 rounded-full'>Explore</button>
           </div>
         </div>
 

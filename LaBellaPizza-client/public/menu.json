@@ -10,7 +10,7 @@
     {
         "_id": "642c155b2c4774f05c36eeb9",
         "name": "Chicago Style Pizza",
-        "recipe": "Chicago pizza are mozzarella, ground beef, sausage, pepperoni, onion, mushrooms, and green peppers, placed underneath the tomato sauce.",
+        "recipe": "Chicago pizza are mozzarella, ground beef, sausage, pepperoni sauce.",
         "image": "/pizza/pizza 2.png",
         "category": "popular",
         "price": 3600
@@ -18,15 +18,15 @@
     {
         "_id": "642c155b2c4774f05c36ee7c",
         "name": "New York Style Pizza",
-        "recipe": "New York pizza with condiments like oregano, red pepper flakes, Parmesan cheese, and garlic powder.",
+        "recipe": "New York pizza with condiments like oregano, red pepper flakes.",
         "image": "/pizza/pizza 3.png",
-        "category": "special",
+        "category": "pizza",
         "price": 2750
     },
     {
         "_id": "642c155b2c4774f05c36ee88",
         "name": "Sicilian Style Pizza",
-        "recipe": "Sicilian pizzas are often topped with bits of tomato, onion, anchovies, and herbs.",
+        "recipe": "Sicilian pizzas are often topped with bits of tomato, onion, anchovies.",
         "image": "/pizza/pizza 4.png",
         "category": "popular",
         "price": 4100
@@ -34,9 +34,9 @@
     {
         "_id": "642c155b2c4774f05c36ee7a",
         "name": "Greek Style Pizza",
-        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese, black olives, and red onion.",
-        "image": "/pizza/pizza 5.png,",
-        "category": "special",
+        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese.",
+        "image": "/pizza/pizza 5.png",
+        "category": "pizza",
         "price": 3400
     },
     {
@@ -44,13 +44,13 @@
         "name": "California Style Pizza",
         "recipe": "include anything from chicken and artichokes to goat cheese and egg.",
         "image": "/pizza/pizza 6.png",
-        "category": "special",
+        "category": "pizza",
         "price": 2500
     },
     {
         "_id": "642c155b2c4774f05c36ee712",
         "name": "Detroit Style Pizza",
-        "recipe": "Detroit pizza traditionally features pepperoni, brick cheese (usually Wisconsin brick cheese), and tomato sauce.",
+        "recipe": "Detroit pizza traditionally features pepperoni, brick cheese sauce.",
         "image": "/pizza/pizza 7.png",
         "category": "popular",
         "price": 3200
@@ -58,9 +58,9 @@
     {
         "_id": "642c155b2c4774f05c36ee7x",
         "name": "St. Louis Style Pizza",
-        "recipe": "St. Louis pizza features Provel cheese and a sweeter tomato sauce with a hefty dosage of oregano.",
+        "recipe": "St. Louis pizza features Provel cheese and a sweeter tomato.",
         "image": "/pizza/pizza 8.png",
-        "category": "special",
+        "category": "pizza",
         "price": 2700
     },
     {
@@ -154,9 +154,9 @@
     {
         "_id": "642c155b2c4774f05c36eea5",
         "name": "St. Louis Style Pizza",
-        "recipe": "St. Louis pizza features Provel cheese and a sweeter tomato sauce with a hefty dosage of oregano.",
+        "recipe": "St. Louis pizza features Provel cheese and a sweeter tomato sauce.",
         "image": "/pizza/pizza 8.png",
-        "category": "special",
+        "category": "pizza",
         "price": 2700
     },
     {
@@ -194,7 +194,7 @@
     {
         "_id": "642c155b2c4774f05c36eeba",
         "name": "Chicago Style Pizza",
-        "recipe": "Chicago pizza are mozzarella, ground beef, sausage, pepperoni, onion, mushrooms, and green peppers, placed underneath the tomato sauce.",
+        "recipe": "Chicago pizza are mozzarella, ground beef, sausage, pepperoni, onion.",
         "image": "/pizza/pizza 2.png",
         "category": "popular",
         "price": 3600
@@ -203,18 +203,18 @@
     {
         "_id": "642c155b2c4774f05c36ee80",
         "name": "New York Style Pizza",
-        "recipe": "New York pizza with condiments like oregano, red pepper flakes, Parmesan cheese, and garlic powder.",
+        "recipe": "New York pizza with condiments like oregano, red pepper flakes.",
         "image": "/pizza/pizza 3.png",
-        "category": "special",
+        "category": "pizza",
         "price": 2750
     
     },
     {
         "_id": "642c155b2c4774f05c36ee90",
         "name": "Greek Style Pizza",
-        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese, black olives, and red onion.",
-        "image": "/pizza/pizza 5.png,",
-        "category": "special",
+        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese.",
+        "image": "/pizza/pizza 5.png",
+        "category": "pizza",
         "price": 3400
     },
     {
@@ -252,9 +252,9 @@
     {
         "_id": "642c155b2c4774f05c36ee99",
         "name": "St. Louis Style Pizza",
-        "recipe": "St. Louis pizza features Provel cheese and a sweeter tomato sauce with a hefty dosage of oregano.",
+        "recipe": "St. Louis pizza features Provel cheese and a sweeter tomato sauce.",
         "image": "/pizza/pizza 8.png",
-        "category": "special",
+        "category": "pizza",
         "price": 2700
     },
     {
@@ -268,18 +268,18 @@
     {
         "_id": "642c155b2c4774f05c36eeb5",
         "name": "New York Style Pizza",
-        "recipe": "New York pizza with condiments like oregano, red pepper flakes, Parmesan cheese, and garlic powder.",
+        "recipe": "New York pizza with condiments like oregano, red pepper flakes powder.",
         "image": "/pizza/pizza 3.png",
-        "category": "special",
+        "category": "pizza",
         "price": 2750
     
     },
     {
         "_id": "642c155b2c4774f05c36eeb6",
         "name": "Greek Style Pizza",
-        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese, black olives, and red onion.",
-        "image": "/pizza/pizza 5.png,",
-        "category": "special",
+        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese.",
+        "image": "/pizza/pizza 5.png",
+        "category": "pizza",
         "price": 3400
     },
     {
@@ -301,17 +301,17 @@
     {
         "_id": "642c155b2c4774f05c36ee8b",
         "name": "St. Louis Style Pizza",
-        "recipe": "St. Louis pizza features Provel cheese and a sweeter tomato sauce with a hefty dosage of oregano.",
+        "recipe": "St. Louis pizza features Provel cheese and a sweeter tomato sauce.",
         "image": "/pizza/pizza 8.png",
-        "category": "special",
+        "category": "pizza",
         "price": 2700
     },
     {
         "_id": "642c155b2c4774f05c36ee8f",
         "name": "Greek Style Pizza",
-        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese, black olives, and red onion.",
-        "image": "/pizza/pizza 5.png,",
-        "category": "special",
+        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese.",
+        "image": "/pizza/pizza 5.png",
+        "category": "pizza",
         "price": 3400
     },
     {
@@ -325,7 +325,7 @@
     {
         "_id": "642c155b2c4774f05c36ee97",
         "name": "Sicilian Style Pizza",
-        "recipe": "Sicilian pizzas are often topped with bits of tomato, onion, anchovies, and herbs.",
+        "recipe": "Sicilian pizzas are often topped with bits of tomato, onion, anchovies.",
         "image": "/pizza/pizza 4.png",
         "category": "popular",
         "price": 4100
@@ -335,13 +335,13 @@
         "name": "California Style Pizza",
         "recipe": "include anything from chicken and artichokes to goat cheese and egg.",
         "image": "/pizza/pizza 6.png",
-        "category": "special",
+        "category": "pizza",
         "price": 2500
     },
     {
         "_id": "642c155b2c4774f05c36eea9",
         "name": "Neapolitan Style Pizza",
-        "recipe": "Features tomatoes, mozzarella from Campania, basil, and extra virgin olive oil.",
+        "recipe": "Features tomatoes, mozzarella from Campania, basil, and olive oil.",
         "image": "/pizza/pizza 1.png",
         "category": "popular",
         "price": 2100
@@ -389,15 +389,15 @@
     {
         "_id": "642c155b2c4774f05c36ee9c",
         "name": "Greek Style Pizza",
-        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese, black olives, and red onion.",
-        "image": "/pizza/pizza 5.png,",
-        "category": "special",
+        "recipe": "feature a variety of non-Greek or Greek toppings, such as feta cheese.",
+        "image": "/pizza/pizza 5.png",
+        "category": "pizza",
         "price": 3400
     },
     {
         "_id": "642c155b2c4774f05c36ee9d",
         "name": "Chicago Style Pizza",
-        "recipe": "Chicago pizza are mozzarella, ground beef, sausage, pepperoni, onion, mushrooms, and green peppers, placed underneath the tomato sauce.",
+        "recipe": "Chicago pizza are mozzarella, ground beef, sausage, pepperoni, onion.",
         "image": "/pizza/pizza 2.png",
         "category": "popular",
         "price": 3600
@@ -405,7 +405,7 @@
     {
         "_id": "642c155b2c4774f05c36eeac",
         "name": "Detroit Style Pizza",
-        "recipe": "Detroit pizza traditionally features pepperoni, brick cheese (usually Wisconsin brick cheese), and tomato sauce.",
+        "recipe": "Detroit pizza traditionally features pepperoni, brick cheese sauce.",
         "image": "/pizza/pizza 7.png",
         "category": "popular",
         "price": 3200
@@ -421,9 +421,9 @@
     {
         "_id": "642c155b2c4774f05c36ee98",
         "name": "New York Style Pizza",
-        "recipe": "New York pizza with condiments like oregano, red pepper flakes, Parmesan cheese, and garlic powder.",
+        "recipe": "New York pizza with condiments like oregano, red pepper flakes powder.",
         "image": "/pizza/pizza 3.png",
-        "category": "special",
+        "category": "pizza",
         "price": 2750
     },
     {
@@ -462,7 +462,7 @@
     {
         "_id": "642c155b2c4774f05c36eeb1",
         "name": "Chicago Style Pizza",
-        "recipe": "Chicago pizza are mozzarella, ground beef, sausage, pepperoni, onion, mushrooms, and green peppers, placed underneath the tomato sauce.",
+        "recipe": "Chicago pizza are mozzarella, ground beef, sausage, pepperoni, onion.",
         "image": "/pizza/pizza 2.png",
         "category": "popular",
         "price": 3600
@@ -472,13 +472,13 @@
         "name": "California Style Pizza",
         "recipe": "include anything from chicken and artichokes to goat cheese and egg.",
         "image": "/pizza/pizza 6.png",
-        "category": "special",
+        "category": "pizza",
         "price": 2500
     },
     {
         "_id": "642c155b2c4774f05c36eeae",
         "name": "Neapolitan Style Pizza",
-        "recipe": "Features tomatoes, mozzarella from Campania, basil, and extra virgin olive oil.",
+        "recipe": "Features tomatoes, mozzarella from Campania, basil, and olive oil.",
         "image": "/pizza/pizza 1.png",
         "category": "popular",
         "price": 2100

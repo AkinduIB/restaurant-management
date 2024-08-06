@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '/logo.png';
 import { TbPhoneCall } from "react-icons/tb";
 
@@ -24,15 +25,15 @@ const Navbar = () => {
 
   const navItems = (
     <>
-      <li><a href="/">Home</a></li>
+      <li><Link className='text-red' to="/">Home</Link></li>
       <li tabIndex={0}>
         <details>
           <summary>Menu</summary>
           <ul className="p-2">
-            <li><a href="#all">All</a></li>
-            <li><a href="#pizza">Pizza</a></li>
-            <li><a href="#melts">Melts</a></li>
-            <li><a href="#desserts">Desserts</a></li>
+            <li><Link to="/menu?category=all">All</Link></li>
+            <li><Link to="/menu?category=pizza">Pizza</Link></li>
+            <li><Link to="/menu?category=melts">Melts</Link></li>
+            <li><Link to="/menu?category=dessert">Desserts</Link></li>
           </ul>
         </details>
       </li>
@@ -40,14 +41,14 @@ const Navbar = () => {
         <details>
           <summary>Services</summary>
           <ul className="p-2">
-            <li><a href="#online-order">Online Order</a></li>
-            <li><a href="#table-booking">Table Booking</a></li>
-            <li><a href="#order-tracking">Order Tracking</a></li>
+            <li><Link to="#online-order">Online Order</Link></li>
+            <li><Link to="#table-booking">Table Booking</Link></li>
+            <li><Link to="#order-tracking">Order Tracking</Link></li>
           </ul>
         </details>
       </li>
-      <li><a href="#offers">Offers</a></li>
-      <li><a href="#gallery">Gallery</a></li>
+      <li><Link to="#offers">Offers</Link></li>
+      <li><Link to="#gallery">Gallery</Link></li>
     </>
   );
 
