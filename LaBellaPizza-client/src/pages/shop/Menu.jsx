@@ -38,12 +38,12 @@ const Menu = () => {
     const filterItems = (category) => {
         setSelectedCategory(category);
         const filtered = category === "all"
-          ? menu
-          : menu.filter((item) => item.category === category);
+            ? menu
+            : menu.filter((item) => item.category === category);
         setFilteredItems(filtered);
         setCurrentPage(1);
-      };
-      
+    };
+
 
     const showAll = () => {
         setFilteredItems(menu);
@@ -102,33 +102,33 @@ const Menu = () => {
             <div className='max-w-screen-2xl container mx-auto xl:px-24 md:px-12 px-4 flex justify-between py-12'>
                 <div className='flex gap-8 flex-wrap items-center'>
                     <div className='flex gap-2 items-center'>
-                        <h3 className='md:text-2xl text-xl font-semibold'>Categories :</h3>
+                        
                         <div className='flex items-center'>
-  <button
-    className={`px-4 py-2 rounded-full ${selectedCategory === "all" ? 'bg-green text-white' : 'bg-gray-200'}`}
-    onClick={showAll}
-  >
-    All
-  </button>
-  <button
-    className={`px-4 py-2 rounded-full ${selectedCategory === "pizza" ? 'bg-green text-white' : 'bg-gray-200'}`}
-    onClick={() => filterItems('pizza')}
-  >
-    Pizza
-  </button>
-  <button
-    className={`px-4 py-2 rounded-full ${selectedCategory === "melts" ? 'bg-green text-white' : 'bg-gray-200'}`}
-    onClick={() => filterItems('melts')}
-  >
-    Melts
-  </button>
-  <button
-    className={`px-4 py-2 rounded-full ${selectedCategory === "dessert" ? 'bg-green text-white' : 'bg-gray-200'}`}
-    onClick={() => filterItems('dessert')}
-  >
-    Desserts
-  </button>
-</div>
+                            <button
+                                className={`px-4 py-2 rounded-full ${selectedCategory === "all" ? 'bg-green text-white' : 'bg-gray-200'}`}
+                                onClick={showAll}
+                            >
+                                All
+                            </button>
+                            <button
+                                className={`px-4 py-2 rounded-full ${selectedCategory === "pizza" ? 'bg-green text-white' : 'bg-gray-200'}`}
+                                onClick={() => filterItems('pizza')}
+                            >
+                                Pizza
+                            </button>
+                            <button
+                                className={`px-4 py-2 rounded-full ${selectedCategory === "melts" ? 'bg-green text-white' : 'bg-gray-200'}`}
+                                onClick={() => filterItems('melts')}
+                            >
+                                Melts
+                            </button>
+                            <button
+                                className={`px-4 py-2 rounded-full ${selectedCategory === "dessert" ? 'bg-green text-white' : 'bg-gray-200'}`}
+                                onClick={() => filterItems('dessert')}
+                            >
+                                Desserts
+                            </button>
+                        </div>
 
                     </div>
                 </div>

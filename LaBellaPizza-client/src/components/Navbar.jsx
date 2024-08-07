@@ -1,10 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '/logo.png';
-import { TbPhoneCall } from "react-icons/tb";
+import { FaRegUser } from "react-icons/fa";
+import Modal from './Modal';
+import { AuthContext } from '../contexts/AuthProvider';
+
 
 const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
+
+  const {user} = useContext(AuthContext);
+  console.log(user)
 
   // handle scroll function
   useEffect(() => {
@@ -92,9 +98,12 @@ const Navbar = () => {
             </div>
           </div>
           {/* Contact btn */}
-          <a href="#contact" className="btn bg-red rounded-full px-6 text-white flex items-center gap-2">
-            <TbPhoneCall /> Contact
-          </a>
+          <button
+            onClick={() => document.getElementById('my_modal_5').showModal()}
+            className="btn bg-red rounded-full px-6 text-white flex items-center gap-2">
+            <FaRegUser /> Login
+          </button>
+          <Modal/>
         </div>
       </div>
     </header>
