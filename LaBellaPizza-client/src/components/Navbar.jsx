@@ -4,6 +4,7 @@ import logo from '/logo.png';
 import { FaRegUser } from "react-icons/fa";
 import Modal from './Modal';
 import { AuthContext } from '../contexts/AuthProvider';
+import Profile from './Profile';
 
 
 const Navbar = () => {
@@ -97,12 +98,14 @@ const Navbar = () => {
               <span className="badge badge-sm indicator-item text-red">8</span>
             </div>
           </div>
-          {/* Contact btn */}
-          <button
+          {/* login btn */}
+          {
+            user? <Profile user={user} /> : <button
             onClick={() => document.getElementById('my_modal_5').showModal()}
             className="btn bg-red rounded-full px-6 text-white flex items-center gap-2">
             <FaRegUser /> Login
           </button>
+          }
           <Modal/>
         </div>
       </div>
