@@ -1,12 +1,16 @@
 import React, { useCallback, useContext, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from '../contexts/AuthProvider';
 import { FaHeart } from "react-icons/fa";
+import Swal from 'sweetalert2'
 
 const Cards = ({ item }) => {
   const { name, image, price, recipe, _id } = item;
   const [isHeartFilled, setIsHeartFilled] = useState(false);
   const { user } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // Add to cart button handler
   const handleAddToCart = (item) => {
@@ -29,12 +33,36 @@ const Cards = ({ item }) => {
       })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
+        // console.log(data);
+        if(data.insertedId){
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            timer: 1500
+          });
+        }
       })
       .catch(error => {
         console.error('Error adding to cart:', error);
       });
+    } else {
+      Swal.fire({
+        title: "Please Login!",
+        text: "Without an account can not able to add items!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Signup Now!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate('/signup', {state:{from:location}})
+        }
+      });
     }
+
   };
 
   const handleHeartClick = () => {
