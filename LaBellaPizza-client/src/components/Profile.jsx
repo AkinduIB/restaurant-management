@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../contexts/AuthProvider';
+import { Link } from 'react-router-dom';
 
 const Profile = ({ user }) => {
  console.log('Profile Photo URL:', user.photoURL);
@@ -40,7 +41,8 @@ const Profile = ({ user }) => {
               <span className="badge">New</span>
             </a>
           </li>
-          <li><a>Order</a></li>
+          <li><a href='/order'>Order</a></li>
+          <li><Link to='/dashboard'>Dashboard</Link></li>
           <li><a>Settings</a></li>
           <li><a onClick={handleLogout}>Logout</a></li>
         </ul>

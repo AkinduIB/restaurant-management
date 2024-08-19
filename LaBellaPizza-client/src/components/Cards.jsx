@@ -36,7 +36,7 @@ const Cards = ({ item }) => {
         // console.log(data);
         if(data.insertedId){
           Swal.fire({
-            position: "top-end",
+            position: "center",
             icon: "success",
             title: "Your work has been saved",
             showConfirmButton: false,
