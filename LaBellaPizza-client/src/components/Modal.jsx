@@ -3,6 +3,7 @@ import { FaFacebookF, FaGithub, FaGoogle } from 'react-icons/fa'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useForm } from "react-hook-form"
 import { AuthContext } from '../contexts/AuthProvider'
+import axios from 'axios'
 
 const Modal = () => {
     const {
@@ -15,7 +16,7 @@ const Modal = () => {
     const { signUpWithGoogle, login } = useContext(AuthContext);
     const [errorMessage, setErrorMessage] = useState("");
 
-    
+
     // redirecting to home page or specific page
     const location = useLocation();
     const navigate = useNavigate();
@@ -27,12 +28,21 @@ const Modal = () => {
         const email = data.email;
         const password = data.password;
         // console.log(email,password)
-        login(email,password).then((result) => {
+        login(email, password).then((result) => {
             const user = result.user;
-            alert("Login successfull!");
-            document.getElementById('my_modal_5').close()
-            navigate(from, { replace: true });
-        }). catch((error) => {
+            const userInfor = {
+                name: data.name,
+                email: data.email,
+            }
+            axios.post('http://localhost:6001/users', userInfor)
+                .then((response) => {
+                    // console.log(response);
+                    alert("Login successfully done!");
+                    document.getElementById('my_modal_5').close()
+                    navigate(from, { replace: true });
+                });
+
+        }).catch((error) => {
             const errorMessage = error.message;
             setErrorMessage("Provide a correct email and password!")
         })
@@ -40,12 +50,25 @@ const Modal = () => {
 
     //google signin
     const handleLogin = () => {
-        signUpWithGoogle().then((result) => {
-            const user = result.user;
-            alert("Login Successfull!")
-            navigate(from, { replace: true });
-        }).catch((error) => console.log(error))
-    }
+        signUpWithGoogle()
+            .then((result) => {
+                const user = result.user;
+                const userInfor = {
+                    name: result?.user?.displayName,
+                    email: result?.user?.email,
+                }
+
+                axios.post('http://localhost:6001/users', userInfor)
+                    .then((response) => {
+                        // console.log(response);
+                        alert("Login successfully done!");
+                        document.getElementById('my_modal_5').close()
+                        navigate("/");
+                    })
+
+            })
+            .catch((error) => console.log(error));
+    };
 
     return (
         <dialog id="my_modal_5"
@@ -56,6 +79,8 @@ const Modal = () => {
                 <div className="modal-action flex flex-col justify-center mt-0">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body" method='dialog'>
                         <h3 className='font-bold text-lg'>Please Login! </h3>
+
+
 
                         {/* email */}
                         <div className="form-control">
