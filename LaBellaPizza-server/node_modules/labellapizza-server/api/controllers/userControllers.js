@@ -2,13 +2,18 @@ const User = require("../models/User");
 
 //get all users
 const getAllUsers = async (req, res) => {
-    try {
-        const users = await User.find({});
-        res.status(200).json(users);
-    } catch (error) {
-        res.status(500).json({ message: error.message });
+    const email = req.decoded.email;
+    const user = await User.findOne({ email });
+
+    if (user?.role !== 'admin' && user?.role !== 'staff') {
+        return res.status(403).send({ message: "forbidden access!" });
     }
+
+    // Fetch all users
+    const users = await User.find();
+    res.send(users);
 };
+
 
 //post a new user
 const createUser = async (req, res) => {

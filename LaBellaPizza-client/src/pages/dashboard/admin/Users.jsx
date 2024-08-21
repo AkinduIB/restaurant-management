@@ -1,24 +1,50 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react'
+import React, { useState } from 'react';
 import { FaTrashAlt } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
-
-
+import useAdmin from '../../../hooks/useAdmin'; // Import the useAdmin hook
 
 const Users = () => {
-  const axiosSecure = useAxiosSecure
+  const axiosSecure = useAxiosSecure();
   const { refetch, data: users = [] } = useQuery({
     queryKey: ['users'],
     queryFn: async () => {
-      const res = await axiosSecure.get('/users');
+      const res = await axiosSecure.get('/users'); 
       return res.data;
     },
   });
 
-  const isadmin = false;
+  const [selectedUser, setSelectedUser] = useState(null);
+  const [isAdmin] = useAdmin(); // Check if the current user is an admin
 
-  console.log(users)
+  const handleMakeAdmin = async (user) => {
+    await axiosSecure.patch(`/users/admin/${user._id}`);
+    alert(`${user.name} is now an admin`);
+    refetch(); // Refetch data to update the UI
+  };
+
+  const handleMakeStaff = async (user) => {
+    await axiosSecure.patch(`/users/staff/${user._id}`);
+    alert(`${user.name} is now staff`);
+    refetch(); // Refetch data to update the UI
+  };
+
+  const handleRoleChange = (user, role) => {
+    if (role === 'admin') {
+      handleMakeAdmin(user);
+    } else if (role === 'staff') {
+      handleMakeStaff(user);
+    }
+  };
+
+  const handleDeleteUser = async (user) => {
+    if (window.confirm(`Are you sure you want to delete ${user.name}?`)) {
+      await axiosSecure.delete(`/users/${user._id}`);
+      alert(`${user.name} has been deleted`);
+      refetch(); 
+    }
+  };
 
   return (
     <div>
@@ -42,23 +68,50 @@ const Users = () => {
               </tr>
             </thead>
             <tbody>
-
               {
                 users.map((user, index) => (
-                  <tr key={index}>
+                  <tr key={user._id}> 
                     <th>{index + 1}</th>
                     <td>{user.name}</td>
                     <td>{user.email}</td>
-                    <td>{
-                      user.role === 'admin' ? "Admin" : (
-                        <button className='btn btn-xs btn-circle text-indigo-500'><FaUsers /></button>
-                      )
-                    }
-
+                    <td>
+                      {
+                        user.role === 'admin' ? "Admin" : user.role === 'staff' ? "Staff" : (
+                          <div className="dropdown">
+                            <button 
+                              onClick={() => isAdmin && setSelectedUser(user)}  // Only allow setting selected user if the current user is an admin
+                              className='btn btn-xs btn-circle text-indigo-500'>
+                              <FaUsers />
+                            </button>
+                            {isAdmin && selectedUser === user && ( // Show dropdown only for admins
+                              <ul className="dropdown-menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <li>
+                                  <button 
+                                    onClick={() => handleRoleChange(user, 'admin')} 
+                                    className='dropdown-item'>
+                                    Make Admin
+                                  </button>
+                                </li>
+                                <li>
+                                  <button 
+                                    onClick={() => handleRoleChange(user, 'staff')} 
+                                    className='dropdown-item'>
+                                    Make Staff
+                                  </button>
+                                </li>
+                              </ul>
+                            )}
+                          </div>
+                        )
+                      }
                     </td>
-                    <td><button className='btn btn-xs text-red'>
-                      <FaTrashAlt />
-                    </button></td>
+                    <td>
+                      <button 
+                        onClick={() => handleDeleteUser(user)} 
+                        className='btn btn-xs text-red'>
+                        <FaTrashAlt />
+                      </button>
+                    </td>
                   </tr>
                 ))
               }
@@ -67,7 +120,7 @@ const Users = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Users
+export default Users;

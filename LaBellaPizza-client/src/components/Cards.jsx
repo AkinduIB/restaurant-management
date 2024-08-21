@@ -13,7 +13,7 @@ const Cards = ({ item }) => {
   const location = useLocation();
 
   // Add to cart button handler
-  const handleAddToCart = (item) => {
+  const handleAddToCart = async (item) => {
     if (user && user?.email) {
       const cartItem = {
         menuItemId: _id,
@@ -21,36 +21,56 @@ const Cards = ({ item }) => {
         quantity: 1,
         image,
         price,
-        email: user.email
+        email: user.email,
       };
-
-      fetch('http://localhost:6001/carts', {
-        method: "POST", // Corrected the typo here
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(cartItem)
-      })
-      .then(res => res.json())
-      .then(data => {
-        // console.log(data);
-        if(data.insertedId){
+  
+      try {
+        const response = await fetch('http://localhost:6001/carts', {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(cartItem),
+        });
+  
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+  
+        const data = await response.json();
+  
+        if (data._id || data.menuItemId) {
           Swal.fire({
             position: "center",
             icon: "success",
-            title: "Your work has been saved",
+            title: "Item added to cart successfully",
+            showConfirmButton: false,
+            timer: 1500
+          });
+        } else {
+          console.error("Item was not added to the cart:", data);
+          Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "Failed to add item to cart",
             showConfirmButton: false,
             timer: 1500
           });
         }
-      })
-      .catch(error => {
+      } catch (error) {
         console.error('Error adding to cart:', error);
-      });
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "An error occurred",
+          text: "Unable to add item to cart. Please try again.",
+          showConfirmButton: true
+        });
+      }
     } else {
       Swal.fire({
         title: "Please Login!",
-        text: "Without an account can not able to add items!",
+        text: "Without an account, you cannot add items to the cart!",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
@@ -58,12 +78,13 @@ const Cards = ({ item }) => {
         confirmButtonText: "Signup Now!"
       }).then((result) => {
         if (result.isConfirmed) {
-          navigate('/signup', {state:{from:location}})
+          navigate('/signup', { state: { from: location } });
         }
       });
     }
-
   };
+  
+  
 
   const handleHeartClick = () => {
     setIsHeartFilled(!isHeartFilled);

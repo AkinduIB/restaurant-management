@@ -3,22 +3,22 @@ import useAuth from './useAuth';
 import useAxiosSecure from './useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 
-const useAdmin = () => {
+const useStaff = () => {
     const { user } = useAuth();
     const axiosSecure = useAxiosSecure();
 
-    const { data: isAdmin, isLoading: isAdminLoading } = useQuery({
-        queryKey: [user?.email, 'isAdmin'],
+    const { data: isStaff, isLoading: isStaffLoading } = useQuery({
+        queryKey: [user?.email, 'isStaff'],
         queryFn: async () => {
             if (!user?.email) return false; // Handle case where email is undefined
-            const res = await axiosSecure.get(`users/admin/${user.email}`);
+            const res = await axiosSecure.get(`users/staff/${user.email}`);
             console.log(res.data);
-            return res.data?.admin;
+            return res.data?.staff;
         },
         enabled: !!user?.email, // Only run query if user email is available
     });
 
-    return [isAdmin, isAdminLoading];
+    return [isStaff, isStaffLoading];
 };
 
-export default useAdmin;
+export default useStaff;

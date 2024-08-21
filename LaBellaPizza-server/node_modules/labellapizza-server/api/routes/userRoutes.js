@@ -2,18 +2,20 @@ const express = require('express');
 const router = express.Router();
 
 const userContoller = require('../controllers/userControllers');
-const verifyToken = require ('../middleware/verifyToken')
+const verifyToken = require ('../middleware/verifyToken');
+const verifyAdmin = require ('../middleware/verifyAdmin');
+const verifyStaff = require ('../middleware/verifyStaff');
 
 
-router.get('/', userContoller.getAllUsers);
+router.get('/', verifyToken, userContoller.getAllUsers);
 router.post('/', userContoller.createUser);
-router.delete('/:id', userContoller.deleteUser);
-router.get('/admin/:email', userContoller.getAdmin);
-router.patch('/admin/:id', userContoller.makeAdmin);
-router.get('/staff/:email', userContoller.getStaff);
-router.patch('/staff/:id', userContoller.makeStaff);
+router.delete('/:id', verifyToken, verifyAdmin, userContoller.deleteUser);
+router.get('/admin/:email', verifyToken, userContoller.getAdmin);
+router.patch('/admin/:id',verifyToken, verifyAdmin, userContoller.makeAdmin);
+router.get('/staff/:email', verifyToken, userContoller.getStaff);
+router.patch('/staff/:id', verifyToken, verifyStaff, userContoller.makeStaff);
 
-//2000
+
 
 
 module.exports = router;
