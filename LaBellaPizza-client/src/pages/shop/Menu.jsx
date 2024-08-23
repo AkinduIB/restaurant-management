@@ -132,15 +132,16 @@ const Menu = () => {
 
                     </div>
                 </div>
+                </div>
 
                 {/* Sorting */}
-                <div className='flex gap-4 items-center'>
+                <div className='flex gap-4 items-center px-8 mb-16'>
                     <h3 className='md:text-2xl text-xl font-semibold'>Sort By :</h3>
                     <div className='dropdown dropdown-bottom'>
                         <label tabIndex={0} className="btn m-1 flex items-center gap-2">Filter <FaFilter /></label>
                         <ul
                             tabIndex={0}
-                            className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-48"
+                            className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-32"
                             style={{ zIndex: 1000 }}>
                             <li><button onClick={() => handleSortChange("default")}>Default</button></li>
                             <li><button onClick={() => handleSortChange("A-Z")}>A-Z</button></li>
@@ -151,7 +152,7 @@ const Menu = () => {
 
                     </div>
                 </div>
-            </div>
+            
 
             {/* Menu items */}
             <div className='max-w-screen-2xl container mx-auto xl:px-24 md:px-12 px-4'>

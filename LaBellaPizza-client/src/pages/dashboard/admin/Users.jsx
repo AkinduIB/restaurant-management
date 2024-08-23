@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { FaTrashAlt } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
-import useAdmin from '../../../hooks/useAdmin'; // Import the useAdmin hook
+import useAdmin from '../../../hooks/useAdmin'; 
 
 const Users = () => {
   const axiosSecure = useAxiosSecure();
@@ -106,11 +106,23 @@ const Users = () => {
                       }
                     </td>
                     <td>
-                      <button 
-                        onClick={() => handleDeleteUser(user)} 
-                        className='btn btn-xs text-red'>
-                        <FaTrashAlt />
-                      </button>
+                      {
+                        isAdmin ? (
+                          <button 
+                            onClick={() => handleDeleteUser(user)} 
+                            className='btn btn-xs text-red'>
+                            <FaTrashAlt />
+                          </button>
+                        ) : (
+                          <button 
+                            className='btn btn-xs text-red' 
+                            disabled // Disable the button for non-admins
+                            style={{ cursor: 'not-allowed' }}
+                          >
+                            <FaTrashAlt />
+                          </button>
+                        )
+                      }
                     </td>
                   </tr>
                 ))

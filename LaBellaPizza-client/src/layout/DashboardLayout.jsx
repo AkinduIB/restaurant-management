@@ -10,7 +10,6 @@ import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { FiLogOut } from "react-icons/fi";
 import { FaCartShopping } from 'react-icons/fa6';
 import useAdmin from '../hooks/useAdmin';
-import Login from '../components/Login';
 import useAuth from '../hooks/useAuth';
 import useStaff from '../hooks/useStaff';
 
@@ -71,15 +70,24 @@ const DashboardLayout = () => {
                                 <li>
                                     <Link to="/" className='flex justify-start mb-4'>
                                         <img src={logo} alt="" className='w-20' />
-                                        <span className="badge badge-primary">Admin</span>
+                                        <span className={`badge ${isAdmin ? 'badge-primary' : 'badge-secondary'}`}>
+                                            {isAdmin ? 'Admin' : isStaff ? 'Staff' : ''}
+                                        </span>
                                     </Link>
                                 </li>
                                 <hr style={{ borderColor: '#D3D3D3' }} />
                                 <li className='mt-3'><Link to="/dashboard"><MdSpaceDashboard />Dashboard</Link></li>
-                                <li><Link to="/dashboard/users"><FaShoppingCart />Manage Booking</Link></li>
-                                <li><Link to="/dashboard/users"><IoBagAddSharp />Add Items</Link></li>
-                                <li><Link to="/dashboard/users"><FaEdit />Manage Items</Link></li>
-                                <li><Link to="/dashboard/users"><FaUsers />All Users</Link></li>
+                                <li><Link to="/dashboard"><FaShoppingCart />Manage Booking</Link></li>
+                                
+                                {/* Only show these links to admins */}
+                                {isAdmin && (
+                                    <>
+                                        <li><Link to="/dashboard/add-menu"><IoBagAddSharp />Add Items</Link></li>
+                                        <li><Link to="/dashboard/manage-items"><FaEdit />Manage Items</Link></li>
+                                        <li><Link to="/dashboard/users"><FaUsers />All Users</Link></li>
+                                    </>
+                                )}
+                                
                                 {/* shared nav link */}
                                 <hr style={{ borderColor: '#D3D3D3' }} />
                                 {sharedLinks}
