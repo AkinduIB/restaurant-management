@@ -17,7 +17,7 @@ const AddMenu = () => {
     // console.log(image_hosting_key)
     const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
     const onSubmit = async (data) => {
-        console.log(data)
+        // console.log(data)
         const imageFile = { image: data.image[0] }
         const hostingImg = await axiosPublic.post(image_hosting_api, imageFile, {
             headers: {

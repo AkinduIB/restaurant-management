@@ -23,7 +23,7 @@ const sharedLinks = (
 );
 
 const DashboardLayout = () => {
-    const { isAuthenticated, loading } = useAuth(); // Get authentication status
+    const { isAuthenticated, loading } = useAuth(); 
     const [isAdmin, isAdminLoading] = useAdmin();
     const [isStaff, isStaffLoading] = useStaff();
 

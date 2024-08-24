@@ -39,6 +39,10 @@ app.use('/carts', cartRoutes);
 app.use('/users', userRoutes);
 
 
+//stripe payment routes
+
+
+
 
 app.get('/', (req, res) => {
     res.send('Hello World!')

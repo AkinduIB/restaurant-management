@@ -3,6 +3,7 @@ import useCart from '../../hooks/useCart'
 import { FaTrash } from "react-icons/fa"
 import Swal from 'sweetalert2'
 import { AuthContext } from '../../contexts/AuthProvider'
+import { Link } from 'react-router-dom'
 
 const CartPage = () => {
   const [cart, refetch] = useCart();
@@ -16,7 +17,7 @@ const CartPage = () => {
 
   //handleIncrease function
   const handleIncrease = (item) => {
-    
+
     fetch(`http://localhost:6001/carts/${item._id}`, {
       method: 'PUT',
       headers: {
@@ -43,7 +44,7 @@ const CartPage = () => {
 
   //handleDecrease function
   const handleDecrease = (item) => {
-    if (item.quantity > 1){
+    if (item.quantity > 1) {
       fetch(`http://localhost:6001/carts/${item._id}`, {
         method: 'PUT',
         headers: {
@@ -63,22 +64,22 @@ const CartPage = () => {
         refetch();
         setcartItems(updatedCart)
       });
-  
+
       refetch();
-    } else{
-      alert ("Item Can't be zero")
+    } else {
+      alert("Item Can't be zero")
     }
-    
+
   };
 
   //calculate total price
   const cartSubTotal = cart.reduce((total, item) => {
     return total + calculatePrice(item);
-    }, 0);
+  }, 0);
 
-    const orderTotal = cartSubTotal;
+  const orderTotal = cartSubTotal;
 
-  
+
 
 
   // handleDelete function
@@ -196,7 +197,9 @@ const CartPage = () => {
           <h3 className='font-bold'>Shopping Details</h3>
           <p>Total Items: {cart.length}</p>
           <p>Total Price: Rs. {orderTotal.toFixed(2)}</p>
-          <button className='btn bg-green text-white'>Proceed to Checkout</button>
+          <Link to='/process-checkout'>
+            <button className='btn bg-green text-white px-8 py-1 mt-5'>Proceed to Checkout</button>
+          </Link>
         </div>
       </div>
 

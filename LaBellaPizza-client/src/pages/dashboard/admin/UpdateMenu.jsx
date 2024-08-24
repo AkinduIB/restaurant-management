@@ -10,7 +10,7 @@ import { FaUtensils } from "react-icons/fa";
 
 const UpdateMenu = () => {
     const item = useLoaderData();
-    console.log(item);
+    // console.log(item);
 
     const { register, handleSubmit, reset } = useForm();
     const axiosPublic = useAxiosPublic();
@@ -24,7 +24,7 @@ const UpdateMenu = () => {
     // console.log(image_hosting_key)
     const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
     const onSubmit = async (data) => {
-        console.log(data)
+        // console.log(data)
         const imageFile = { image: data.image[0] }
         const hostingImg = await axiosPublic.post(image_hosting_api, imageFile, {
             headers: {

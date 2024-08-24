@@ -1,7 +1,7 @@
 import React from 'react'
 import useMenu from '../../../hooks/useMenu'
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 
@@ -14,24 +14,30 @@ const ManageItems = () => {
     // console.log(menu);
 
 
-    
+
     // handleDelete
-    const deleteMenuItem = async (item) => {
-        if (window.confirm(`Are you sure you want to delete ${item.name}?`)) {
-            try {
-                const response = await axiosSecure.delete(`/menu/${item._id}`);
-                if (response.status === 200) {
-                    alert(`${item.name} has been deleted`);
-                    refetch(); // Refresh the menu after deletion
-                } else {
-                    throw new Error('Failed to delete the item.');
-                }
-            } catch (error) {
-                console.error('Error deleting menu item:', error);
-                // alert('Failed to delete the item. Please try again.');
+    const handleDeleteItem = (item) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                const res = await axiosSecure.delete(`/menu/${item._id}`)
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
             }
-        }
+        });
+
     };
+
 
 
 
@@ -87,7 +93,7 @@ const ManageItems = () => {
                                             </Link>
                                         </td>
                                         <td>
-                                            <button onClick={() => deleteMenuItem(item)} className="btn btn-ghost btn-xs text-red"><FaTrashAlt /></button>
+                                            <button onClick={() => handleDeleteItem(item)} className="btn btn-ghost btn-xs text-red"><FaTrashAlt /></button>
                                         </td>
                                     </tr>
 
