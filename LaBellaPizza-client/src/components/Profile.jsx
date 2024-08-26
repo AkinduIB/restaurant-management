@@ -5,7 +5,7 @@ import useAdmin from '../hooks/useAdmin';
 import useStaff from '../hooks/useStaff';
 
 const Profile = ({ user }) => {
-  console.log('Profile Photo URL:', user.photoURL);
+  // console.log('Profile Photo URL:', user.photoURL);
 
   const { logOut } = useContext(AuthContext);
   const [isAdmin] = useAdmin(); 

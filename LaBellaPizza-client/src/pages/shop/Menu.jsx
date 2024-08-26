@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Cards from '../../components/Cards';
 import { FaFilter } from "react-icons/fa";
 
@@ -93,7 +93,9 @@ const Menu = () => {
                         <p className='text-xl text-gray md:w-4/5 mx-auto'>
                             Bring your family and savor the joy of delectable pizzas like Margherita, Pepperoni, Veggie Delight, BBQ Chicken, and more, all at a great value.
                         </p>
+                        <Link to='/cart-page'>
                         <button className='btn bg-red px-8 py-3 font-semibold text-[#ffffff] rounded-full'>Order Now</button>
+                        </Link>
                     </div>
                 </div>
             </div>

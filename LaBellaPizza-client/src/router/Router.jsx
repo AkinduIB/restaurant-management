@@ -14,6 +14,8 @@ import AddMenu from "../pages/dashboard/admin/AddMenu";
 import ManageItems from "../pages/dashboard/admin/ManageItems";
 import UpdateMenu from "../pages/dashboard/admin/UpdateMenu";
 import Payment from "../pages/shop/Payment";
+import Order from "../pages/dashboard/Order";
+import ManageBooking from "../pages/dashboard/admin/ManageBooking";
 
 const router = createBrowserRouter([
   {
@@ -26,20 +28,24 @@ const router = createBrowserRouter([
       },
       {
         path: "/menu",
-        element: <PrivateRouter><Menu/> </PrivateRouter>
+        element: <PrivateRouter><Menu /> </PrivateRouter>
       },
-      
+
       {
         path: "/cart-page",
-        element: <CartPage/>
+        element: <CartPage />
       },
       {
         path: "/update-profile",
         element: <UpdateProfile />
       },
       {
-       path: "/process-checkout" ,
-       element: <Payment/>
+        path: "/process-checkout",
+        element: <Payment />
+      },
+      {
+        path: "/order",
+        element: <Order/>
       }
     ]
   },
@@ -57,7 +63,7 @@ const router = createBrowserRouter([
   //admin routes
   {
     path: "dashboard",
-    element: <PrivateRouter><DashboardLayout/></PrivateRouter>,
+    element: <PrivateRouter><DashboardLayout /></PrivateRouter>,
     children: [
       {
         path: "",
@@ -65,20 +71,24 @@ const router = createBrowserRouter([
       },
       {
         path: "users",
-        element: <Users/>
+        element: <Users />
       },
       {
         path: "add-menu",
-        element: <AddMenu/>
+        element: <AddMenu />
       },
       {
         path: "manage-items",
-        element: <ManageItems/>
+        element: <ManageItems />
       },
       {
         path: "update-menu/:id",
-        element: <UpdateMenu/>,
-        loader: ({params}) => fetch(`http://localhost:6001/menu/${params.id}`)
+        element: <UpdateMenu />,
+        loader: ({ params }) => fetch(`http://localhost:6001/menu/${params.id}`)
+      },
+      {
+        path:"manage-booking",
+        element: <ManageBooking />
       }
 
     ]

@@ -77,7 +77,7 @@ const DashboardLayout = () => {
                                 </li>
                                 <hr style={{ borderColor: '#D3D3D3' }} />
                                 <li className='mt-3'><Link to="/dashboard"><MdSpaceDashboard />Dashboard</Link></li>
-                                <li><Link to="/dashboard"><FaShoppingCart />Manage Booking</Link></li>
+                                <li><Link to="/dashboard/manage-booking"><FaShoppingCart />Manage Booking</Link></li>
                                 
                                 {/* Only show these links to admins */}
                                 {isAdmin && (
@@ -96,7 +96,7 @@ const DashboardLayout = () => {
                     </div>
                 </div>
             ) : (
-                <Login />
+                <button Link to="/">Move back to Home</button>
             )}
         </div>
     );

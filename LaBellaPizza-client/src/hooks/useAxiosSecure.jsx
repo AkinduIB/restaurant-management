@@ -28,7 +28,7 @@ axiosSecure.interceptors.response.use(function (response) {
 
     if(status === 401 || status === 403 ){
         await logOut();
-        navigate("/login")
+        navigate("/")
     }
     
     return Promise.reject(error);

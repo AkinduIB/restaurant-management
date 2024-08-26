@@ -36,9 +36,15 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD
 const menuRoutes = require('./api/routes/menuRoutes');
 const cartRoutes = require('./api/routes/cartRoutes');
 const userRoutes = require('./api/routes/userRoutes');
+const paymentRoutes = require('./api/routes/paymentRoutes');
+const adminStats = require('./api/routes/adminStats');
+const orderStats = require('./api/routes/orderStats');
 app.use('/menu', menuRoutes);
 app.use('/carts', cartRoutes);
 app.use('/users', userRoutes);
+app.use('/payments', paymentRoutes);
+app.use('/adminStats', adminStats);
+app.use('/orderStats', orderStats);
 
 
 //stripe payment routes
