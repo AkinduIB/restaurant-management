@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { MdSpaceDashboard } from "react-icons/md";
-import { FaLocationArrow, FaQuestionCircle, FaUsers } from "react-icons/fa";
+import { FaLocationArrow, FaPercent, FaQuestionCircle, FaUsers } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { IoBagAddSharp } from "react-icons/io5";
 import { FaEdit } from "react-icons/fa";
@@ -85,11 +85,12 @@ const DashboardLayout = () => {
                                         <li><Link to="/dashboard/add-menu"><IoBagAddSharp />Add Items</Link></li>
                                         <li><Link to="/dashboard/manage-items"><FaEdit />Manage Items</Link></li>
                                         <li><Link to="/dashboard/users"><FaUsers />All Users</Link></li>
+                                        <li><Link to="/dashboard/manage-offers"><FaPercent />Offers</Link></li>
                                     </>
                                 )}
                                 
                                 {/* shared nav link */}
-                                <hr style={{ borderColor: '#D3D3D3' }} />
+                                <hr className='mt-4' style={{ borderColor: '#D3D3D3' }} />
                                 {sharedLinks}
                             </ul>
                         </div>

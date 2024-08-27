@@ -16,6 +16,9 @@ import UpdateMenu from "../pages/dashboard/admin/UpdateMenu";
 import Payment from "../pages/shop/Payment";
 import Order from "../pages/dashboard/Order";
 import ManageBooking from "../pages/dashboard/admin/ManageBooking";
+import Offer from "../pages/dashboard/Offer";
+import ManageOffer from "../pages/dashboard/admin/ManageOffer";
+
 
 const router = createBrowserRouter([
   {
@@ -46,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/order",
         element: <Order/>
+      },
+      {
+        path: "/offer",
+        element: <Offer/>
       }
     ]
   },
@@ -89,6 +96,10 @@ const router = createBrowserRouter([
       {
         path:"manage-booking",
         element: <ManageBooking />
+      },
+      {
+        path: "manage-offers",
+        element: <ManageOffer />
       }
 
     ]
