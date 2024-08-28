@@ -3,6 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { MdSpaceDashboard } from "react-icons/md";
 import { FaLocationArrow, FaPercent, FaQuestionCircle, FaUsers } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
+import { GrGallery } from "react-icons/gr";
 import { IoBagAddSharp } from "react-icons/io5";
 import { FaEdit } from "react-icons/fa";
 import logo from "/logo.png";
@@ -23,7 +24,7 @@ const sharedLinks = (
 );
 
 const DashboardLayout = () => {
-    const { isAuthenticated, loading } = useAuth(); 
+    const { isAuthenticated, loading } = useAuth();
     const [isAdmin, isAdminLoading] = useAdmin();
     const [isStaff, isStaffLoading] = useStaff();
 
@@ -78,7 +79,7 @@ const DashboardLayout = () => {
                                 <hr style={{ borderColor: '#D3D3D3' }} />
                                 <li className='mt-3'><Link to="/dashboard"><MdSpaceDashboard />Dashboard</Link></li>
                                 <li><Link to="/dashboard/manage-booking"><FaShoppingCart />Manage Booking</Link></li>
-                                
+
                                 {/* Only show these links to admins */}
                                 {isAdmin && (
                                     <>
@@ -88,7 +89,9 @@ const DashboardLayout = () => {
                                         <li><Link to="/dashboard/manage-offers"><FaPercent />Offers</Link></li>
                                     </>
                                 )}
-                                
+                                <li><Link to="/dashboard/manage-gallery"><GrGallery />Add Gallery</Link></li>
+
+
                                 {/* shared nav link */}
                                 <hr className='mt-4' style={{ borderColor: '#D3D3D3' }} />
                                 {sharedLinks}

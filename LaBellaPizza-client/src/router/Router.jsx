@@ -18,6 +18,8 @@ import Order from "../pages/dashboard/Order";
 import ManageBooking from "../pages/dashboard/admin/ManageBooking";
 import Offer from "../pages/dashboard/Offer";
 import ManageOffer from "../pages/dashboard/admin/ManageOffer";
+import ManageGallery from "../pages/dashboard/admin/ManageGallery";
+import Gallery from "../pages/dashboard/Gallery";
 
 
 const router = createBrowserRouter([
@@ -53,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "/offer",
         element: <Offer/>
+      },
+      {
+        path: "/gallery",
+        element: <Gallery />
       }
     ]
   },
@@ -100,6 +106,10 @@ const router = createBrowserRouter([
       {
         path: "manage-offers",
         element: <ManageOffer />
+      },
+      {
+        path: "manage-gallery",
+        element: <ManageGallery/>
       }
 
     ]

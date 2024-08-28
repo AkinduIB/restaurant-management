@@ -60,7 +60,7 @@ const Navbar = () => {
         </details>
       </li>
       <li><Link to="/offer">Offers</Link></li>
-      <li><Link to="#gallery">Gallery</Link></li>
+      <li><Link to="/gallery">Gallery</Link></li>
     </>
   );
 

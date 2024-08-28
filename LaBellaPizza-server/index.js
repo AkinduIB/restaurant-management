@@ -39,6 +39,7 @@ const paymentRoutes = require('./api/routes/paymentRoutes');
 const adminStats = require('./api/routes/adminStats');
 const orderStats = require('./api/routes/orderStats');
 const offerRoutes = require('./api/routes/offerRoutes');
+const galleryRoutes = require('./api/routes/galleryRoutes');
 app.use('/menu', menuRoutes);
 app.use('/carts', cartRoutes);
 app.use('/users', userRoutes);
@@ -46,6 +47,7 @@ app.use('/payments', paymentRoutes);
 app.use('/adminStats', adminStats);
 app.use('/orderStats', orderStats);
 app.use('/api/offers', offerRoutes);
+app.use('/api/gallery', galleryRoutes);
 
 
 //stripe payment routes
