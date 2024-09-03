@@ -55,7 +55,7 @@ const Navbar = () => {
           <ul className="p-2">
             <li><Link to="/menu?category=all">Online Order</Link></li>
             <li><Link to="#table-booking">Table Booking</Link></li>
-            <li><Link to="#order-tracking">Make Inquiries</Link></li>
+            <li><Link to="/inquiries">Make Inquiries</Link></li>
           </ul>
         </details>
       </li>

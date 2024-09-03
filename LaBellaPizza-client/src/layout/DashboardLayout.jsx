@@ -13,6 +13,8 @@ import { FaCartShopping } from 'react-icons/fa6';
 import useAdmin from '../hooks/useAdmin';
 import useAuth from '../hooks/useAuth';
 import useStaff from '../hooks/useStaff';
+import { MdQuestionAnswer } from "react-icons/md";
+
 
 const sharedLinks = (
     <>
@@ -79,6 +81,8 @@ const DashboardLayout = () => {
                                 <hr style={{ borderColor: '#D3D3D3' }} />
                                 <li className='mt-3'><Link to="/dashboard"><MdSpaceDashboard />Dashboard</Link></li>
                                 <li><Link to="/dashboard/manage-booking"><FaShoppingCart />Manage Booking</Link></li>
+                                <li><Link to="/dashboard/manage-queries"><MdQuestionAnswer />Manage Queries</Link></li>
+
 
                                 {/* Only show these links to admins */}
                                 {isAdmin && (
@@ -90,6 +94,7 @@ const DashboardLayout = () => {
                                     </>
                                 )}
                                 <li><Link to="/dashboard/manage-gallery"><GrGallery />Add Gallery</Link></li>
+
 
 
                                 {/* shared nav link */}

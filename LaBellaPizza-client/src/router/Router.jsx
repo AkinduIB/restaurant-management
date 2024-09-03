@@ -20,6 +20,8 @@ import Offer from "../pages/dashboard/Offer";
 import ManageOffer from "../pages/dashboard/admin/ManageOffer";
 import ManageGallery from "../pages/dashboard/admin/ManageGallery";
 import Gallery from "../pages/dashboard/Gallery";
+import Inquiries from "../pages/dashboard/Inquiries";
+import ManageQuery from "../pages/dashboard/admin/ManageQuery";
 
 
 const router = createBrowserRouter([
@@ -59,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "/gallery",
         element: <Gallery />
+      },
+      {
+        path: "/inquiries",
+        element: <Inquiries />
       }
     ]
   },
@@ -110,6 +116,10 @@ const router = createBrowserRouter([
       {
         path: "manage-gallery",
         element: <ManageGallery/>
+      },
+      {
+        path: "manage-queries",
+        element: <ManageQuery/>
       }
 
     ]
